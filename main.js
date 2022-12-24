@@ -24,7 +24,7 @@ const screenDisplay = document.querySelector('.screen');
 
 let calculation = []; // will push what user inputs into this - each item will be a string
 let accumulativeCalc = ''; // will be calculation.join('');
-const operators = ['+', '-', '*', '/', '.']; // to be looped thru when determining if first item input is an operator or decimal point
+const operators = ['+', '-', '*', '/']; // to be looped thru when determining if first item input is an operator or decimal point
 
 function calculate(button) {
     let value = button.textContent;
