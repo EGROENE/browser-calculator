@@ -32,7 +32,8 @@ body {
 }
 
 .calculator {
-    background-color: var(--secondary-color);
+    /* background-color: var(--secondary-color); */
+    background: rgba(0,0,0,0.4);
     padding: var(--size-20);
     border-radius: var(--size-12);
     width: 24%;
