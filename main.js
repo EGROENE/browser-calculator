@@ -1,3 +1,21 @@
+// PAGE BACKGROUND FUNCTIONALITY
+const bgImages = [
+    'https://images.unsplash.com/photo-1557238687-f10be4e702ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bm9yaGVybiUyMGxpZ2h0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1483347756197-71ef80e95f73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YXVyb3JhJTIwYm9yZWFsaXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1610989432929-9769f3cf8006?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGF1cm9yYSUyMGJvcmVhbGlzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1529963183134-61a90db47eaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGF1cm9yYSUyMGJvcmVhbGlzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1525220964737-6c299398493c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGF1cm9yYSUyMGJvcmVhbGlzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1483086431886-3590a88317fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fGF1cm9yYSUyMGJvcmVhbGlzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60',
+    'https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGF1cm9yYSUyMGJvcmVhbGlzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60'
+]
+
+const setBG = () => {
+    let randNum = Math.floor(Math.random() * bgImages.length);
+    document.body.style.backgroundImage = 'url("' + bgImages[randNum] + '")';
+}
+setBG();
+
+// CALCULATOR FUNCTIONALITY
 // Get all buttons:
 const buttons = document.querySelectorAll('button');
 
