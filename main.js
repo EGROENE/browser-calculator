@@ -62,6 +62,7 @@ function calculate(button) {
             screenDisplay.textContent = result;
         }
         calculation = []; // reset calculation once operation is done
+        calculation.push(result); // push result to calculation array so consecutive ops can be run
     } else { // below is what happens when neither 'clear' or 'equals' is hit - as in, operation is ongoing
         calculation.push(value);
         accumulativeCalc = calculation.join('');
