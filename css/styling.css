@@ -33,13 +33,16 @@ body {
 
 button {
     font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .calculator {
     background-color: var(--secondary-color);
     padding: var(--size-20);
     border-radius: var(--size-12);
-    width: 21%;
+    width: 24%;
 }
 
 .screen {
@@ -66,7 +69,7 @@ button {
     width: var(--size-48);
     height: var(--size-48);
     border-radius: var(--size-24);
-    margin: var(--size-4);
+    margin: var(--size-12);
 }
 
 .buttons button:hover {
