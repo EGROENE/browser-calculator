@@ -32,7 +32,7 @@ function calculate(button) {
     console.log(calculation[0])
     // Check if first thing input is an operator or decimal point:
     for (let operator of operators) {
-        if (operator === calculation || operator === calculation[0] || operator === calculation[calculation.length - 1]) {
+        if (operator === calculation || operator === calculation[0] || operator === calculation[calculation.length - 1] || SyntaxError) {
             screenDisplay.textContent = 'Invalid operation';
         }
     }
