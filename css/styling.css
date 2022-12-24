@@ -14,5 +14,88 @@
     --size-56: 3.5rem;
     --size-64: 4rem;
     --size-128: 8rem;
-    --size-256: 16rem:
+    --size-256: 16rem;
+    --primary-color: black;
+    --secondary-color: #4E545C;
+    --tertiary-color: #8D9797;
+    --fourth-color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: monospace;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+button {
+    font-family: monospace;
+}
+
+.calculator {
+    background-color: var(--secondary-color);
+    padding: var(--size-20);
+    border-radius: var(--size-12);
+    width: 21%;
+}
+
+.screen {
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--fourth-color);
+    font-size: var(--size-42);
+    text-align: end;
+    padding: var(--size-4);
+}
+
+.buttons {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    background-color: var(--tertiary-color);
+    border: none;
+    color: white;
+    font-size: var(--size-40);
+    width: var(--size-48);
+    height: var(--size-48);
+    border-radius: var(--size-24);
+    margin: var(--size-4);
+}
+
+.buttons button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.buttons button:active {
+    background-color: rgb(65, 60, 60);
+}
+
+#equals-btn {
+    color: black;
+    background-color: white;
+}
+
+#equals-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+#clear-btn {
+    width: 100%;
+    max-width: 100%;
+    background-color: black;
+    font-size: var(--size-32);
+}
+
+#clear-btn:hover {
+    background-color: white;
+    color: black;
 }
