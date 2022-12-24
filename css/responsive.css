@@ -1,0 +1,80 @@
+@media screen and (min-width: 1536px) {
+    .calculator {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .calculator {
+        width: 25%;
+    }
+
+    .screen {
+        font-size: var(--size-56);
+    }
+
+    .buttons button {
+        font-size: var(--size-64);
+        height: 82px;
+        width: 82px;
+    }
+}
+
+@media screen and (max-width: 962px) {
+    .calculator {
+        width: 29%;
+    }
+
+    .buttons button {
+        margin: var(--size-8);
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .calculator {
+        width: 47%;
+    }
+
+    .buttons button {
+        margin: var(--size-12);
+        font-size: var(--size-56);
+        width: var(--size-64);
+        height: var(--size-64);
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .calculator {
+        width: 61%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .calculator {
+        width: 81%;
+    }
+
+    .buttons button {
+        font-size: var(--size-48);
+        margin: var(--size-8);
+    }
+}
+
+@media screen and (max-width: 393px) {
+    .calculator {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .calculator {
+        width: 86%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .buttons button {
+        width: var(--size-56);
+        height: var(--size-56);
+    }
+}
