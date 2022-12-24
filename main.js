@@ -28,18 +28,29 @@ const operators = ['+', '-', '*', '/', '.']; // to be looped thru when determini
 
 function calculate(button) {
     let value = button.textContent;
-    console.log(calculation)
-    console.log(calculation[0])
+    calculation.push(value);
     // Check if first thing input is an operator or decimal point:
     for (let operator of operators) {
         if (operator === calculation || operator === calculation[0] || operator === calculation[calculation.length - 1] || SyntaxError) {
             screenDisplay.textContent = 'Invalid operation';
         }
+        
+        // If two operators are placed consecutively, the first one is eliminated & the most recently placed operator is used:
+        for (let item of calculation) {
+            if (item === operator) {
+                let firstOpIndex = calculation.indexOf(operator);
+                // loop again thru operators to check if the item after the first operator in calculation array is also an op:
+                for (let op of operators) {
+                    if (calculation[firstOpIndex + 1] === op) {
+                        calculation.splice(firstOpIndex, 1);
+                    }
+                }
+            }
+        }
     }
 
     // Check if too many characters (extending operation or number wider that width of .screen)
     if (calculation.length >= 10) {
-        console.log(screenDisplay.textContent);
         calculation = []
         screenDisplay.textContent = 'Can display 10 chars, but operation possible';
     } else if (value === 'CLEAR') { // if 'clear' btn is hit, reset calculation and display default screen text content
@@ -64,7 +75,7 @@ function calculate(button) {
         calculation = []; // reset calculation once operation is done
         calculation.push(result); // push result to calculation array so consecutive ops can be run
     } else { // below is what happens when neither 'clear' or 'equals' is hit - as in, operation is ongoing
-        calculation.push(value);
+        //calculation.push(value);
         accumulativeCalc = calculation.join('');
         screenDisplay.textContent = accumulativeCalc;
     }
