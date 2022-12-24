@@ -55,7 +55,7 @@ function calculate(button) {
         screenDisplay.textContent = 'Can display 10 chars, but operation possible';
     } else if (value === 'CLEAR') { // if 'clear' btn is hit, reset calculation and display default screen text content
         calculation = [];
-        screenDisplay.textContent = '.';
+        screenDisplay.textContent = '0';
     } else if (value === '=') {  // if 'equals' btn is hit, evaluate what user input
         let result = eval(accumulativeCalc); // eval() method gives result after conversion to string
 
